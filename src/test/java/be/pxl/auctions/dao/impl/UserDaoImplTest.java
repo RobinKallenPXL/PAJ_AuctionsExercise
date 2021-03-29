@@ -66,13 +66,13 @@ public class UserDaoImplTest {
 
 	@Test
 	public void returnsNullWhenNoUserFoundWithGivenEmail() {
-		User user = new User();
+		/* User user = new User();
 		user.setFirstName("Robin");
 		user.setLastName("Kall");
 		user.setEmail("robin.kall@example.com");
 		user.setDateOfBirth(LocalDate.of(2000, 10, 6));
 		entityManager.flush();
-		entityManager.clear();
+		entityManager.clear(); */
 		Optional<User> retrievedUser = userDao.findUserByEmail("not.existing@email.example");
 		assertFalse(retrievedUser.isPresent());
 	}
